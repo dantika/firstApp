@@ -1,0 +1,10 @@
+<h1>{{ listTitle }}</h1>
+<form (submit)='createTodo()'>
+    <input type="text" name="todoLabel" id="todoLabel" [(ngModel)]='newTodo'>
+    <div [hidden]='todos.length'>Aucun éléments</div>
+</form>
+<ul>
+    <li *ngFor='let todo of todos; let i = index'>
+        <p>{{ i }} - {{ todo }}</p>
+    </li>
+</ul>
